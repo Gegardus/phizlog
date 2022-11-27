@@ -1,0 +1,9 @@
+{
+  "name": "y",
+  "version": "y",
+  "main": "index.js",
+  "repository": "git@github.com:Gegardus/phizlog.git",
+  "author": "Gegardus <stgegard@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
