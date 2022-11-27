@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Phizlog</title>
+    <%= favicon_link_tag asset_path('user-secret-solid-black.svg')%>
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:700|Courgette|Raleway:400,500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,6 +12,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class='container'>
+      <br>
+      <%= render 'layouts/flash' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

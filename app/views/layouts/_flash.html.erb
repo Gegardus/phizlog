@@ -1,0 +1,6 @@
+<!-- scans through each of the key, value pairs of the flashes Hash -->
+
+<% flash.each do |message_type, message| %>
+<!-- creates a new div -->
+  <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+<% end %>

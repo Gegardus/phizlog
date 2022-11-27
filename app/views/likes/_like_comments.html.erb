@@ -1,0 +1,22 @@
+<!-- 
+View uses object variable supplied to this rendered view to display the amount of likes the particular object has.
+A link is created using the comment_likes_path route which is passed the object as a parameter. 
+This nested route links to the create method in the Likes controller.
+-->
+
+<!-- 
+the ‘method: :post’ parameter on the link_to method is necessary to create a new Like object. 
+But generally link_to is used to GET information.
+-->
+<span>
+<%= object.likes.count %>
+
+<%= button_to comment_likes_path(object), class: "text-light", method: :post do %>
+  <% if liked?(subject = object, type = 'comment') %>
+      <button class="btn btn-liked size-12"><i class="fas fa-thumbs-up"></i></button>
+    <% else %>
+      <button class="btn btn-neutral size-12"><i class="fas fa-thumbs-up"></i></button>
+  <% end %>
+<% end %>
+Likes
+</span>
