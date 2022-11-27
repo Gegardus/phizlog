@@ -1,7 +1,7 @@
 <span>
 <%= object.likes.count %>
 
-<%= button_to post_likes_path(object), class: "text-light", turbo_method: :post do %>
+<%= button_to post_likes_path(object), class: "btn btn-transparent text-light", turbo_method: :post do %>
   <% if liked?(object, 'post') %>
       <button class="btn btn-liked"><i class="fas fa-thumbs-up"></i></button>
     <% else %>

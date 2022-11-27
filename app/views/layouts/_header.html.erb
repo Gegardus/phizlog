@@ -1,5 +1,4 @@
 <header class="fixed-top navbar-dark bg-dark shadow">
-
   <div>
     <nav class="navbar navbar-expand-sm">
       <div class ="navbar-header"> 
@@ -8,7 +7,6 @@
           <span class="text-white font-weight-bold font-courgette size-24">Phizbook</span>
         <% end %>
       </div>
-
       <div class= "container mx-auto">
         <div class= "row mx-auto">
           <div class= "col-auto">
@@ -17,7 +15,6 @@
               <i class="fas fa-home fa-2x"></i> Timeline
             <%end%>
           </div>
-
           <div class= "col-auto">
             <!--  links to the Users index view -->
             <%= link_to users_path, class: "text-light nav-link font-raleway" do%>
@@ -26,7 +23,6 @@
           </div>
         </div>
       </div>
-
  <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
           <li class="nav-item">
@@ -56,7 +52,16 @@
     </nav>    
   </div>  
 </header>
-<p class="text-center"><%= button_to "Emergency Exit", destroy_user_session_path, class: "dropdown-item font-raleway text-danger", method: :delete %></p>
+
+
+<div class="">
+  <% if user_signed_in? %>
+  <!--  links to the Users show view -->
+    <%= link_to "My Profile", user_path(current_user), class: "dropdown-item font-raleway text-success" %>
+  <!--  links to a devise sessions controller destroy method -->
+    <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item font-raleway text-warning", method: :delete %>
+  <% end %>
+</div>
 
 <!-- allows a pop up to appear once clicked -->
 <% if user_signed_in? %>

@@ -1,3 +1,4 @@
+//= require js
 //= require jquery
 import { Application } from "@hotwired/stimulus"
 

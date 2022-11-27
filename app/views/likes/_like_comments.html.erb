@@ -11,7 +11,7 @@ But generally link_to is used to GET information.
 <span>
 <%= object.likes.count %>
 
-<%= button_to comment_likes_path(object), class: "text-light", method: :post do %>
+<%= button_to comment_likes_path(object), class: "btn btn-transparent text-light", method: :post do %>
   <% if liked?(subject = object, type = 'comment') %>
       <button class="btn btn-liked size-12"><i class="fas fa-thumbs-up"></i></button>
     <% else %>

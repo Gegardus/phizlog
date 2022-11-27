@@ -97,4 +97,7 @@ gem 'omniauth-facebook'
 # Rubocop gem to correct linter related issues keeping your code close to standard coding practices
 gem 'rubocop'
 
+# Jquery Rails
+gem 'jquery-rails'
+
 gem 'simple_form'
