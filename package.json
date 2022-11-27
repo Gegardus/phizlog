@@ -5,5 +5,8 @@
   "repository": "git@github.com:Gegardus/phizlog.git",
   "author": "Gegardus <stgegard@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "jquery": "^3.6.1"
+  }
 }
